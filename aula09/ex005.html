@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Primeiros passos com DOM</title>
+        <style>
+            body {
+                background-color: rgb(0, 104, 223);
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Iniciando estudos com DOM</h1>
+        <p>Aqui vai o resultado</p>
+        <p id="res">Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+        <p name="msg">Melhor forma de aprendizado</p>
+        <p class="cl">Outro paragrafo</p>
+        <div id="click">Clique em mim</div>
+        
+        <script>
+            var fundo = window.document.body
+            fundo.style.background = 'black'
+            var p1 = window.document.getElementsByTagName('p')[0]
+            var id1 = window.document.getElementById('res')
+            var n1 = window.document.getElementsByName('msg')[0]
+            var c1 = window.document.getElementsByClassName('cl')[0]
+            var qr = window.document.querySelector('div#click')
+            window.document.write('Parágrafo 1: ' + p1.innerText)
+            window.document.write('Parágrafo 2: ' + id1.innerHTML)
+            window.document.write('Paragrafo 3: ' + n1.innerText)
+            window.document.write('Paragrafo 4: ' + c1.innerText)
+            qr.style.background = 'green'
+
+        </script>
+    </body>
+</html>
