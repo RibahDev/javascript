@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Simples JS</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+                box-sizing: border-box;
+            }
+            
+            #calc {
+                margin: auto;
+                background-color: blue;
+                width: 500px;
+                height: 150px;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.575);
+                border: inset 5px solid rgb(0, 0, 0);
+            }
+
+            div#calc > h1 {
+                text-align: center;
+                color: white;
+                text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+            }
+
+            div#calc > input{
+                width: 70px;
+                box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.171);
+            }
+            
+            div > #txtn1 {
+                margin-left: 135px;
+            }
+
+
+            div#res {
+                margin: auto;
+                color: white;
+                background-color: blue;
+                width: 500px;
+                text-align: center;
+                box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.575);
+
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="calc">
+            <h1>Calculadora Js</h1>
+            <input type="number" name="txtn1" id="txtn1">
+            <input type="number" name="txtn2" id="txtn2">
+            <input type="button" value="Somar"  onclick="somar()">
+        </div>
+        <div id="res">Resultado:</div>
+
+        <script>
+            function somar() {
+                var tn1 = document.getElementById('txtn1')
+                var tn2 = document.getElementById('txtn2')
+                var res = document.getElementById('res')
+                var n1 = Number(tn1.value)
+                var n2 = Number(tn2.value)
+                var s = n1 + n2
+                res.innerHTML = `O valor Total de sua Soma: ${s}`
+                res.style.backgroundColor = 'green'
+
+            }
+        </script>
+    </body>
+</html>
