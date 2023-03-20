@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DETRAN</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 1.2em;
+                background-color: rgb(0, 89, 255);
+            }
+
+            input {
+                width: 70px;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Sistemas de Multas </h1>
+        Velocidade do Veículo: <input type="number" name="txtvel" id="txtvel">km/h
+        <input type="button" value="Consultar" onclick="cons()">
+        <div id="res">Consultar Sistema</div>
+        <script>
+            function cons() {
+                var tvel = document.querySelector('input#txtvel')
+                var vel = Number (tvel.value)
+                var res = document.querySelector('div#res')
+                res.innerHTML= `<p>Sua velocidade é de <strong>${vel}km/h</strong>, </p>`
+                if (vel <= 80) {
+                    res.innerHTML += `<p>Você está na velocidade da via. Dirija com cuidado.</p>`
+                    res.style.color = 'white'
+                }else {
+                    res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade! Dirija com cuidado.</p>`
+                    res.style.color = 'white'
+                }
+            }
+        </script>
+    </body>
+</html>
