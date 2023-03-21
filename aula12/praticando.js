@@ -30,13 +30,13 @@ switch(mes) {
         console.log('Setembro')
         break
     case 9 :
-        console.log('')
+        console.log('Outubro')
         break
     case 10:
-        console.log('')
+        console.log('Novembro')
         break
     case 11:
-        console.log('')
+        console.log('Dezembro')
         break
     default:
         console.log('[ERRO] Algo deu errado.')
