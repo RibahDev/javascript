@@ -10,14 +10,22 @@
 
     <body>
         <header>
-            <h1>Título</h1>
+            <h1>Tabuada</h1>
         </header>
 
         <section>
-            <div>
+            <div id="dados">
+                <p>Número:
+                    <input type="number" name="ntxt" id="ntxt" required>
+                    <input type="button" value="Gerar Tabuada" onclick="multiplicar()">
+                </p>
             </div>
-            
             <div>
+               <p>
+                    <select name="tabu" id="tabu" size="10">
+                        <option>Digite um Número acima</option>
+                    </select>    
+                </p> 
             </div>
         </section>
 
