@@ -6,7 +6,7 @@ function carregar() {
     var hora = hor.getHours()
     var minutos = min.getMinutes()
     mensagem.innerHTML = `<p>Agora são <strong>${hora} Horas</strong> e <strong>${minutos} min.</strong></p>`
-    if (hora >= 00 && hora < 12) {
+    if (hora >= 0 && hora < 12) {
         foto.src = 'imagens/manha.png'
         document.body.style.background = '#FBE88D'
     } else if (hora >= 12 && hora <= 18) {
